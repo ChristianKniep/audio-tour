@@ -12,7 +12,7 @@ targets:
 version: "3.7"
 services:
     www:
-        image: qnib/boeddenstedt-audio-guide:latest
+        image: boeddenstedt/audio-tour
         ports:
             - 4000:4000
 ---
