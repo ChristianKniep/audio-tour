@@ -12,7 +12,8 @@ targets:
 version: "3.7"
 services:
     www:
-        image: boeddenstedt/audio-tour
+        image: ${image}
         ports:
-            - 4000:4000
+            - 4000:80
 ---
+image: boeddenstedt/audio-tour
