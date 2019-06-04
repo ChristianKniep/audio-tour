@@ -11,9 +11,16 @@ targets:
 ---
 version: "3.7"
 services:
-    www:
-        image: ${image}
-        ports:
-            - 4000:80
+    boedde:
+      image: boeddenstedt/audio-tour:2019-06-04.1
+      networks: ["${network}"]
+      deploy:
+        labels:
+          traefik.port: "80"
+          traefik.backend: "boedde"
+          traefik.frontend.rule: "Host:boedde.qnib.org"
+networks:
+  ${network}:
+    external: true
 ---
-image: boeddenstedt/audio-tour
+network: ingress_www
