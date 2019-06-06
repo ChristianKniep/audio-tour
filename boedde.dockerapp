@@ -12,7 +12,7 @@ targets:
 version: "3.7"
 services:
     boedde:
-      image: boeddenstedt/audio-tour:2019-06-04.1
+      image: boeddenstedt/audio-tour:2019-06-06.1
       networks: ["${network}"]
       deploy:
         labels:
