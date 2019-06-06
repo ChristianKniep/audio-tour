@@ -15,6 +15,7 @@ services:
       image: boeddenstedt/audio-tour:2019-06-06.1
       networks: ["${network}"]
       deploy:
+        replicas: ${replicas}
         labels:
           traefik.port: "80"
           traefik.backend: "boedde"
@@ -24,3 +25,4 @@ networks:
     external: true
 ---
 network: ingress_www
+replicas: 2
