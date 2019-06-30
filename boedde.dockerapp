@@ -12,8 +12,9 @@ targets:
 version: "3.7"
 services:
     boedde:
-      image: boeddenstedt/audio-tour:2019-06-07.1
+      image: boeddenstedt/audio-tour:2019-06-30.local3
       networks: ["${network}"]
+      ports: ["8080:80"]
       deploy:
         replicas: ${replicas}
         labels:
